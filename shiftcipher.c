@@ -39,7 +39,7 @@ main()
                 input[i] = check;
             }
         }
-        printf("\nThe decrypted message is : %s ", input);
+        printf("\nThe encrypted message is : %s ", input);
     }
     else if (choice == 2)
     {
