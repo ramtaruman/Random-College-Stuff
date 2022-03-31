@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-main()
+int main()
 {
     char input[1000], check;
     int i, shift, choice;
@@ -12,7 +12,7 @@ main()
     if (choice == 1)
     {
         printf("\nEnter the message to encrypt : ");
-        gets(input);
+        scanf("%s", &input);
 
         printf("\nEnter the shift : ");
         scanf("%d", &shift);
@@ -22,7 +22,7 @@ main()
             check = input[i];
             if (check >= 'a' && check <= 'z')
             {
-                check += shift;
+                check -= shift;
                 if (check > 'z')
                 {
                     check -= 'z' + 'a' - 1;
@@ -44,7 +44,7 @@ main()
     else if (choice == 2)
     {
         printf("\nEnter the message to decrypt : ");
-        gets(input);
+        scanf("%s", &input);
 
         printf("\nEnter the shift : ");
         scanf("%d", &shift);
